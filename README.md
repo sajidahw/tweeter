@@ -1,6 +1,6 @@
-# Project 3 - *Name of App Here*
+# Project 3 - *Tweeter*
 
-**Name of your app** is a basic twitter app to read your tweets.
+**Tweeter** is a basic twitter app to read your tweets.
 
 Time spent: **X** hours spent in total
 
