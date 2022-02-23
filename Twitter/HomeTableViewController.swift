@@ -40,7 +40,7 @@ class HomeTableViewController: UITableViewController {
         let myParams = ["count": numberOfTweet] //using api params
         
         //call API
-        TwitterAPICaller.client?.getDictionariesRequest(url: myUrl, parameters: myParams, success: {(tweets: [NSDictionary] )in
+        TwitterAPICaller.client?.getDictionariesRequest(url: myUrl, parameters: myParams as [String : Any], success: {(tweets: [NSDictionary] )in
             
             self.tweetArray.removeAll() //empties
             //populate tweeter array from twitter
@@ -53,6 +53,8 @@ class HomeTableViewController: UITableViewController {
             
         }, failure: { (Error) in
             print("Could not retrieve tweets, oh no!!")
+            // Try printing our the error (inside your getTweets function)
+            print(Error.localizedDescription) 
         })
     }
     
@@ -66,7 +68,7 @@ class HomeTableViewController: UITableViewController {
         let myParams = ["count": numberOfTweet]
         
         //call API
-        TwitterAPICaller.client?.getDictionariesRequest(url: myUrl, parameters: myParams, success: {(tweets: [NSDictionary] )in
+        TwitterAPICaller.client?.getDictionariesRequest(url: myUrl, parameters: myParams as [String : Any], success: {(tweets: [NSDictionary] )in
             
             self.tweetArray.removeAll() //empties
             //populate tweeter array from twitter
